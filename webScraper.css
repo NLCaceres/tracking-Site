@@ -5,3 +5,18 @@ body {
 #mainTable {
 	margin: 48px;
 }
+
+#option-dropdown {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+#watchlistAdd {
+	font-size: 14px;
+}
+
+#watchlistRemove {
+	font-size: 14px;
+}
