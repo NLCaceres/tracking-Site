@@ -3,9 +3,11 @@ $(document).ready(function() {
 
     $("#search-button").click(function () {
         console.log("Got a click from the submit button");
-        var searchTerm = "";
-        if ($("#search-bar").text().length > 0) {
-            searchTerm = $("#search-bar").text();
+        var searchTerm = $("#search-bar").val();
+        console.log(searchTerm);
+        
+        if (searchTerm.length > 0) {
+            console.log("Got inside the if statement");
             var regexPatt = new RegExp(searchTerm, "gi");
             var columnNames = $(".name-column");
             findKeyWord(columnNames, regexPatt);
