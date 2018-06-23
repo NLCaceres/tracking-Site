@@ -9,7 +9,7 @@ $(document).ready(function() {
         if (searchTerm.length > 0) {
             console.log("Got inside the if statement");
             var regexPatt = new RegExp(searchTerm, "gi");
-            var columnNames = $(".name-column");
+            var columnNames = $(".column-name");
             findKeyWord(columnNames, regexPatt);
         }
     });
@@ -19,10 +19,17 @@ $(document).ready(function() {
 
 function findKeyWord(names, patt) {
     console.log("Calling on this function");
-    for (var name in names) {
-        if (name.match(patt)) {
-            console.log("Found a match!");
-            console.log("It matched with: " + name);
+
+    $(".row-coin").css({'display':'table-row'});
+
+    names.each(function(index ) {
+        var text = $(this).text();
+
+        if (!text.match(patt)) {
+            console.log("Found a negative match");
+            $(".row-coin").eq(index).css({'display':'none'});
         }
-    }
+    });
+
+    return;
 }
