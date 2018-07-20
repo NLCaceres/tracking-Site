@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
     $("#search-button").click(function () {
         console.log("Got a click from the submit button");
         var searchTerm = $("#search-bar").val();
